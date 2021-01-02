@@ -1,8 +1,8 @@
 import { useEffect, useContext } from 'react'
 
-import Layout from '../component/Layout/Layout'
-import { fetchPopularData } from '../apis/index'
 import { Store } from '../store/index'
+import { fetchPopularData } from '../apis/index'
+import Layout from '../component/Layout'
 
 const Top = () => {
   const { globalState, setGlobalState } = useContext(Store)

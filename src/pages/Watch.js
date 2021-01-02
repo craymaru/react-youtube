@@ -1,4 +1,4 @@
-import Layout from '../component/Layout/Layout'
+import Layout from '../component/Layout'
 
 const Watch = () => {
   return <Layout>Watch page</Layout>
