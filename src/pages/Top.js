@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 
 import Layout from '../component/Layout/Layout'
 import { fetchPopularData } from '../apis/index'
