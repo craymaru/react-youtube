@@ -11,7 +11,7 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case 'SET_POPULAR':
-      return { populer: action.payload.populer }
+      return { popular: action.payload.popular }
     default:
       return state
   }

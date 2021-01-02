@@ -5,6 +5,7 @@
   display: flex;
   width: 100%;
   background-color: #202020;
+
   a {
     color: white;
     font-size: 1.2rem;
@@ -12,11 +13,22 @@
     padding-left: 1rem;
     text-decoration: none;
   }
+
   form {
     width: 50%;
     height: 32px;
     display: flex;
     margin: 12px 0;
+
+    @media screen and (max-width: 960px) {
+      width: 80%;
+      margin: 1rem 2.5%;
+    }
+    @media screen and (max-width: 560px) {
+      width: 90%;
+      margin: 1rem auto;
+    }
+
     input {
       width: 80%;
       text-indent: 0.5rem;
@@ -24,6 +36,7 @@
       background-color: white;
       color: #303030;
     }
+
     button {
       width: 20%;
       color: white;
@@ -31,14 +44,15 @@
       border-color: #303030;
     }
   }
+
   .item {
     &:first-child {
       flex-grow: 1;
     }
+
     &:last-child {
       flex-grow: 2;
     }
- }
+  }
 
 }
-
