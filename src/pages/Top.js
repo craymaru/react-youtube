@@ -11,7 +11,6 @@ const Top = () => {
 
   useEffect(() => {
     fetchPopularData().then((res) => {
-      console.log('data', res)
       setGlobalState({ type: 'SET_POPULAR', payload: { popular: res.data.items } })
     })
     //eslint-disable-next-line react-hooks/exhaustive-deps
@@ -21,7 +20,6 @@ const Top = () => {
     <Layout>
       <VideoGrid>
         {globalState.popular && globalState.popular.map((popular) => {
-          console.log(popular.snippet.thumbnails)
           const thumbnail = popular.snippet.thumbnails.standard || popular.snippet.thumbnails.default
           return (
             <VideoGridItem

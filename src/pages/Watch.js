@@ -1,7 +1,12 @@
 import Layout from '../component/Layout'
+import VideoDetail from '../component/VideoDetail';
 
 const Watch = () => {
-  return <Layout>Watch page</Layout>
+  return (
+    <Layout>
+      <VideoDetail/>
+    </Layout>
+  )
 }
 
 export default Watch
