@@ -1,5 +1,6 @@
 import { useEffect, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
+import Linkify from 'react-linkify'
 
 import { fetchSelectedData } from '../apis/index'
 import { Store } from '../store/index'
@@ -27,8 +28,10 @@ const VideoDetail = () => {
     <div className={Style.wrap}>
       <VideoPlay id={globalState.selected.id} />
       <p>{globalState.selected.snippet.title}</p>
-      <hr/>
-      <pre>{globalState.selected.snippet.description}</pre>
+      <hr />
+      <Linkify>
+        <pre>{globalState.selected.snippet.description}</pre>
+      </Linkify>
     </div>
   ) : (
     <span>No data.</span>
