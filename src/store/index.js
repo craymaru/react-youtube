@@ -3,6 +3,7 @@ import React, { createContext, useReducer } from 'react'
 // create initialState and reducer method to generate State and Dispatch method.
 const initialState = {
   popular: [],
+  related: [],
   selected: {},
 }
 
@@ -13,6 +14,8 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'SET_POPULAR':
       return { ...state, popular: action.payload.popular }
+    case 'SET_RELATED':
+      return { ...state, related: action.payload.related }
     case 'SET_SELECTED':
       return { ...state, selected: action.payload.selected }
     default:
